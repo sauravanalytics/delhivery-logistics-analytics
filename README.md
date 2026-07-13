@@ -170,12 +170,6 @@ The original source dataset (`delhivery_data.xlsx`) is **not included in this re
 
 ---
 
-## Future Improvements
-
-- Correct the on-dashboard callout text on the Route & Geography and Time & Cutoff Analysis pages so the written takeaways match the underlying averages (see notes in the Dashboard Walkthrough section above).
-- Add a proper date table and time-intelligence measures (e.g., week-over-week trip volume) now that the data spans a multi-week window.
-- Add row-level drillthrough from the corridor pivot table to individual trip records.
-- Publish the report to the Power BI Service and link a live/interactive version here instead of static images.
 
 ---
 
