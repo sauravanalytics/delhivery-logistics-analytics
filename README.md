@@ -6,7 +6,7 @@ A 4-page Power BI dashboard analyzing **144,867 trip-leg records** from Delhiver
 
 ## Dashboard Preview
 
-![Dashboard Overview](images/dashboard-overview.png)
+![Dashboard Overview](images/dashboard-overview)
 
 ---
 
