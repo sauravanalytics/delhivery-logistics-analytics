@@ -1,18 +1,18 @@
 # Delhivery Logistics Analytics Dashboard
 
-A 4-page Power BI dashboard analyzing **144,867 trip-leg records** from Delhivery, India's largest logistics network, to measure delivery delays, cutoff compliance, and route performance across **32 Indian states**.
+A 4-page Power BI dashboard analysing **144,867 trip-leg records** from Delhivery, India's largest logistics network, to measure delivery delays, cutoff compliance, and route performance across **32 Indian states**.
 
 ---
 
 ## Dashboard Preview
 
-![Dashboard Overview](images/dashboard-overview)
+![Dashboard Overview](images/dashboard-overview.png)
 
 ---
 
 ## Project Overview
 
-This project takes Delhivery's raw trip-leg dataset (loaded from a single Excel workbook, `delhivery_data.xlsx`) and turns it into an interactive Power BI dashboard covering trip volumes, delay behavior, cutoff (SLA) compliance, and geographic route performance. The model is built on one central fact table, **`Delhivery Data`**, with 13 custom DAX measures and 11 calculated columns layered on top of the raw fields to support the KPIs and visuals used throughout the report.
+This project takes Delhivery's raw trip-leg dataset (loaded from a single Excel workbook, `delhivery_data.xlsx`). It turns it into an interactive Power BI dashboard covering trip volumes, delay behaviour, cutoff (SLA) compliance, and geographic route performance. The model is built on one central fact table, **`Delhivery Data`**, with 13 custom DAX measures and 11 calculated columns layered on top of the raw fields to support the KPIs and visuals used throughout the report.
 
 The underlying data spans trip creation timestamps from **12 September 2018 to 3 October 2018**, and retains a `dataset_split` field (`training` / `test`) inherited from the source file.
 
@@ -24,7 +24,7 @@ Every trip in the dataset carries both an **actual delivery time** and an **OSRM
 
 - Actual trip time consistently exceeds the OSRM benchmark — the average delay is **~203 minutes** per trip, and **97.8%** of trips run over the OSRM estimate.
 - Only **82%** of trips meet their scheduled cutoff time, meaning roughly 1 in 5 trips (**~26,100 trips**) miss their SLA.
-- Delay behavior varies by route type (**FTL** vs **Carting**), by state, by corridor (source state → destination state), and by time of day/day of week — so a single average doesn't tell the full story.
+- Delay behaviour varies by route type (**FTL** vs **Carting**), by state, by corridor (source state → destination state), and by time of day/day of week — so a single average doesn't tell the full story.
 
 The dashboard exists to help a logistics/operations audience drill into *where* and *when* delays and cutoff misses concentrate, rather than just reporting a single top-line delay number.
 
@@ -47,7 +47,7 @@ The dashboard exists to help a logistics/operations audience drill into *where* 
 - **KPI card visuals** on every page for at-a-glance metrics
 - **Interactive slicers** for route type, source state, delayed/on-time status, and trip hour
 - A **filled map** of source states, a **pivot table** cross-tabbing source vs. destination state by average delay, and **scatter, bar, line, and donut charts** for distribution and trend analysis
-- Custom-formatted header banners and callout text boxes summarizing page-level takeaways
+- Custom-formatted header banners and callout text boxes summarising page-level takeaways
 
 ---
 
@@ -70,7 +70,7 @@ The landing page gives a network-wide summary: four KPI cards for **Total Trips*
 ### 2. Delivery Performance
 ![Delivery Performance](images/delivery-performance.png)
 
-This page isolates delay and time metrics with KPI cards for **Total Trips**, **Avg Delay Minutes**, **Avg Delay Factor**, and **On Time Trips**. A clustered bar chart compares **Avg Actual Time** against **Avg OSRM Time** by route type, directly visualizing the gap between planned and actual delivery time. A scatter chart plots **Avg Distance (km)** against **Avg Delay Minutes**, colored by source state and split by route type series, to check whether longer trips correlate with more delay. A bar chart buckets trips into delay ranges (**Delay Bucket**: Early, 0–100, 100–300, 300–600, 600–1000, 1000+ minutes), and a second bar chart shows **Avg Delay Factor** by source state. Slicers filter by route type and by delayed/on-time status.
+This page isolates delay and time metrics with KPI cards for **Total Trips**, **Avg Delay Minutes**, **Avg Delay Factor**, and **On Time Trips**. A clustered bar chart compares **Avg Actual Time** against **Avg OSRM Time** by route type, directly visualising the gap between planned and actual delivery time. A scatter chart plots **Avg Distance (km)** against **Avg Delay Minutes**, colored by source state and split by route type series, to check whether longer trips correlate with more delay. A bar chart buckets trips into delay ranges (**Delay Bucket**: Early, 0–100, 100–300, 300–600, 600–1000, 1000+ minutes), and a second bar chart shows **Avg Delay Factor** by source state. Slicers filter by route type and by delayed/on-time status.
 
 ### 3. Route & Geography
 ![Route & Geography Analysis](images/route-geography-analysis.png)
